@@ -10,9 +10,9 @@ username = "sqltxt@163.com"
 password = "iamanothwolf1999"
 sender = "sqltxt@163.com"
 receiver = ["sqltxt@qq.com"]
-subject = "PI新IP"
-#file_path = "/root/rootcrons/lastip.txt"
-file_path = "C:\IP\lastip.txt"
+subject = "PI new IP"
+file_path = "/root/rootcrons/lastip.txt"
+#file_path = "C:\IP\lastip.txt"
 
 def sendEmail(msghtml):
     msgRoot = MIMEMultipart('related')
