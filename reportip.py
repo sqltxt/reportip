@@ -1,5 +1,6 @@
-import urllib.request
+#import urllib.request
 import time
+import urllib2
 import re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -7,10 +8,10 @@ import smtplib
 
 smtpserver = "smtp.163.com"
 username = "sqltxt@163.com"
-password = "iamanothwolf1999"
+password = "nhh109620"
 sender = "sqltxt@163.com"
-receiver = ["sqltxt@qq.com"]
-subject = "PI new IP"
+receiver = ["sqltxt@163.com"]
+subject = "PI New IP"
 file_path = "/root/rootcrons/lastip.txt"
 #file_path = "C:\IP\lastip.txt"
 
@@ -45,14 +46,16 @@ def getip():
     
 def visit(url):
     print(url)
-    response = urllib.request.urlopen(url,timeout=20)
+    #response = urllib.request.urlopen(url,timeout=20)
+    response = urllib2.urlopen(url,timeout=20)
     if url == response.geturl():
         str = response.read().decode("gbk")
         print(re.search('\d+\.\d+\.\d+\.\d+',str).group(0))
     return re.search('\d+\.\d+\.\d+\.\d+',str).group(0)
 
 if __name__ == '__main__':
-    while 1:
+   #while 1:
+	time.sleep(20)
         ipaddr = getip() 
         print(ipaddr)
         ip_file = open(file_path)
@@ -68,4 +71,4 @@ if __name__ == '__main__':
             ip_file.close()
             sendEmail(ipaddr)
             print ("Successfully send the e-mail.")
-        time.sleep(3600)
+        
