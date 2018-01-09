@@ -8,7 +8,7 @@ import smtplib
 
 smtpserver = "smtp.163.com"
 username = "sqltxt@163.com"
-password = "nhh109620"
+password = "*******"
 sender = "sqltxt@163.com"
 receiver = ["sqltxt@163.com"]
 subject = "PI New IP"
