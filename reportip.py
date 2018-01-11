@@ -8,10 +8,10 @@ import smtplib
 
 smtpserver = "smtp.163.com"
 username = "sqltxt@163.com"
-password = "nhh109620"
+password = "********"
 sender = "sqltxt@163.com"
 receiver = ["sqltxt@163.com"]
-subject = "PI New IP"
+subject = "New IP"
 file_path = "/root/rootcrons/lastip.txt"
 #file_path = "C:\IP\lastip.txt"
 
